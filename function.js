@@ -16,7 +16,8 @@ document.getElementById('add').addEventListener('click', function () {
     let img = document.createElement('img');
     img.src = profile.value;
     let h4 = document.createElement('h4');
-    h4.innerText = name.value;
+    h4.innerText = name.value.toUpperCase();
+    console.log(h4);
 
     childDiv1.appendChild(img);
     childDiv1.appendChild(h4);
@@ -43,6 +44,17 @@ document.getElementById('add').addEventListener('click', function () {
     //add student
     parentDiv.appendChild(childDiv1);
     parentDiv.appendChild(childDiv2);
-    let container = document.getElementById('student-details');
-    container.appendChild(parentDiv);
-})
+
+    if (profile.value != '' && name.value != '' && roll.value != '' && id.value != '' && department.value != '' && address.value != '') {
+        let container = document.getElementById('student-details');
+        container.appendChild(parentDiv);
+    }
+
+    //clear all feild
+    profile.value = '';
+    name.value = '';
+    roll.value = '';
+    id.value = '';
+    department.value = '';
+    address.value = '';
+});
