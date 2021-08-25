@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #80808050;
+    font-family: sans-serif;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* hold all content */
+#container{
+    width: 100vw;
+    height: 100vh;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* student details area  */
+#student-details{
+    width: 500px;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+.student{
+    background-color: #80808050;
+    width: 80%;
+   margin: 10px auto;
+   border-radius: 10px;
+    
+}
+
+/* profile area  */
+.header{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* details area  */
+.details{
+    padding: 15px;
+    margin-left: 20px;
+    font-weight: 300;
+}
+/* student details area end  */
+
+/* student entry */
+#entry-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#entry-student{
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#entry-student input{
+    margin: 5px 0;
+    width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #808080d7;
+    padding: 0 5px;
+    background-color: #80808050;
+}
+#entry-student input:focus{
+    border: 1px solid #808080d7;
+    outline: none;
+}
+#add{
+    padding: 3px 7px;
+    border: 1px solid #808080d7;
+    border-radius: 3px;
+    background-color: #80808050;
+    align-self: flex-end;
+    margin-right: 10%;
+    margin-top: 20px;
+
+}
+/* student entry end  */
+
+/* make responsive */
+@media only screen and (max-width:768px) {
+    #student-details{
+        width: 50%;
+    }
+    #entry-studen{
+        width: 50%;
+    }
+}
+@media only screen and (max-width:500px) {
+    #container{
+        display: flex;
+        flex-direction: column;
+    }
+    #student-details{
+        width: 100%;
+    }
+    #entry-wrapper{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    #entry-student{
+        width: 100%;
+        margin-top: 10px;
+    }
+}
