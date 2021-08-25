@@ -17,7 +17,6 @@ document.getElementById('add').addEventListener('click', function () {
     img.src = profile.value;
     let h4 = document.createElement('h4');
     h4.innerText = name.value.toUpperCase();
-    console.log(h4);
 
     childDiv1.appendChild(img);
     childDiv1.appendChild(h4);
