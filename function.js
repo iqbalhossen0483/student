@@ -48,7 +48,6 @@ document.getElementById('add').addEventListener('click', function () {
         let container = document.getElementById('student-details');
         container.appendChild(parentDiv);
     }
-
     //clear all feild
     profile.value = '';
     name.value = '';
@@ -57,3 +56,31 @@ document.getElementById('add').addEventListener('click', function () {
     department.value = '';
     address.value = '';
 });
+
+//click by enter
+function enterClick(present, next) {
+    document.getElementById(present).addEventListener('keyup', function (event) {
+        if (event.keyCode == 13) {
+            if (event.target.value != '') {
+                event.preventDefault();
+                document.getElementById(next).focus();
+            }
+        }
+    })
+};
+
+let name = document.getElementById('name');
+name = enterClick('name', 'roll');
+let roll = document.getElementById('roll');
+roll = enterClick('roll', 'id');
+let id = document.getElementById('id');
+id = enterClick('id', 'department');
+let department = document.getElementById('department');
+department = enterClick('department', 'address');
+
+document.getElementById('address').addEventListener('keyup', function (event) {
+    if (event.keyCode == 13) {
+        event.preventDefault();
+        document.getElementById('add').click();
+    }
+})
